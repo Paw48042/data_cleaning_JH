@@ -84,5 +84,5 @@ groupby_data <- full_clean %>% group_by(subject,Activity)
 tidy <- summarise_each(groupby_data, funs(mean)) 
 
 View(tidy) #Here's the tidy data
-
+write.table(tidy,file = 'tidy_data.txt',row.names = FALSE) # Code Output
 
